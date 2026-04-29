@@ -2,7 +2,7 @@
 
 > **Trigger:** Cuando digas **"documentar"**, este archivo se actualiza con los trabajos realizados.
 > **Última actualización:** 2026-04-30
-> **Versión:** 4.1.0 — SPA unificada, desplegada en GitHub Pages
+> **Versión:** 4.2.0 — SPA unificada con 15 módulos funcionales
 
 ---
 
@@ -138,9 +138,9 @@ nash-power-play/
 |--------|--------|------|--------|-------|
 | 00 | Overview / Dashboard | `/` | ✅ | Stats, módulos |
 | 01 | Grafo de actores | `/grafo` | ✅ | 30 actores, 40+ relaciones |
-| 02 | Matriz de pagos | `/matriz` | 🔧 Etapa 2 | Placeholder |
-| 03 | Escenarios | `/escenarios` | 🔧 Etapa 3 | Placeholder |
-| 04 | Indicadores | `/indicadores` | 🔧 Etapa 4 | Placeholder |
+| 02 | Matriz de pagos | `/matriz` | ✅ | 6 plantillas, editor N×M, solver Nash puro + mixto |
+| 03 | Escenarios | `/escenarios` | ✅ | 6 sliders, 5 escenarios Nash, guardado de presets |
+| 04 | Indicadores | `/indicadores` | ✅ | 8 KPIs macro, 4 KPIs políticos, 3 charts, 8 sectores |
 | 05 | Pensamiento IA | `/ia` | ✅ | 5 modelos IA, trends, analistas |
 | 06 | PyMEs | `/pymes` | ✅ | 6 sectores, indicadores, políticas |
 | 07 | Kanban | `/kanban` | ✅ | 10 escenarios |
@@ -324,9 +324,9 @@ Carpeta `/Documents/` con esta estructura:
 | 1. Fundaciones + Grafo | ✅ | React + Vite + grafo xyflow |
 | 2. Migración datos | ✅ | 14 módulos de datos migrados |
 | 3. Deploy producción | ✅ | GitHub Pages con auto-deploy |
-| 4. Matriz de pagos | 🔧 Pendiente | Editor N×M + solver Nash |
-| 5. Escenarios | 🔧 Pendiente | Simulador what-if |
-| 6. Indicadores | 🔧 Pendiente | KPIs + feed noticias |
+| 4. Matriz de pagos | ✅ | Editor N×M, 6 plantillas, solver Nash puro + mixto |
+| 5. Escenarios | ✅ | Simulador what-if con 6 parámetros |
+| 6. Indicadores | ✅ | KPIs macro + políticos + charts + sectores |
 | 7. Hardening + QA | 🔧 Pendiente | Tests, performance, SEO |
 
 ---

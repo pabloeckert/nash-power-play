@@ -1,5 +1,12 @@
 # Changelog — Tablero Nash
 
+## v4.2.0 — 2026-04-30 (Módulos 02-04)
+
+### Added
+- **Matriz de pagos (Módulo 02):** Editor N×M interactivo (2×2, 3×3, 4×4), 6 plantillas (Dilema del Prisionero, Coordinación, Gallina, Milei vs UxP, Nación vs Gobernadores, Triple Juego), solver Nash puro (inspección de mejores respuestas), solver mixto (fórmula cerrada 2×2), visualización de equilibrios
+- **Escenarios (Módulo 03):** Simulador what-if con 6 sliders (inflación, popularidad, fragmentación, reservas, pobreza, riesgo país), 5 escenarios Nash con probabilidades dinámicas, guardado/carga de presets, modelo Nash inspirado en datos reales
+- **Indicadores (Módulo 04):** 8 KPIs macroeconómicos, 4 KPIs políticos, 3 gráficos (inflación, reservas, riesgo país) con recharts, vista de 8 sectores productivos con variación PIB y empleo
+
 ## v4.1.0 — 2026-04-30 (SPA Unificada)
 
 ### Changed
