@@ -59,9 +59,12 @@ export default function IndicadoresPage() {
 
   return (
     <div className="mx-auto max-w-[1600px] px-6 py-8">
-      <div className="font-display text-[10px] uppercase tracking-[0.3em] text-primary">Módulo 04</div>
-      <h1 className="font-display text-3xl mt-1">Indicadores</h1>
-      <p className="text-muted-foreground text-sm mt-1">KPIs políticos y económicos con evolución temporal.</p>
+      <div className="flex items-center gap-2 mb-2">
+        <span className="font-display text-[9px] text-primary/50 font-bold tracking-wider">04</span>
+        <div className="h-px w-8 bg-primary/20" />
+      </div>
+      <h1 className="font-display text-2xl font-bold tracking-tight">Indicadores</h1>
+      <p className="text-muted-foreground text-xs mt-1">KPIs políticos y económicos con evolución temporal.</p>
 
       {/* Tabs */}
       <div className="mt-6 flex gap-2">
@@ -73,10 +76,10 @@ export default function IndicadoresPage() {
           <button
             key={tab.key}
             onClick={() => setActiveTab(tab.key)}
-            className={`px-4 h-9 rounded-md border text-xs font-display transition-colors ${
+            className={`px-3 h-7 rounded-md border text-[10px] font-display transition-all ${
               activeTab === tab.key
-                ? 'border-primary bg-primary/10 text-primary'
-                : 'border-border text-muted-foreground hover:text-foreground'
+                ? 'border-primary/40 bg-primary/10 text-primary'
+                : 'border-border/40 text-muted-foreground hover:text-foreground'
             }`}
           >
             {tab.label}
@@ -89,7 +92,7 @@ export default function IndicadoresPage() {
           {/* KPIs */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {ECON_KPIS.map((kpi, i) => (
-              <div key={i} className="bg-card border border-border rounded-lg p-4">
+              <div key={i} className="bg-card border border-border/60 rounded-lg p-4">
                 <div className="text-[10px] font-display uppercase tracking-wider text-muted-foreground">{kpi.label}</div>
                 <div className="font-display text-2xl mt-1">{kpi.value}</div>
                 <div className="flex items-center gap-2 mt-1">
@@ -103,7 +106,7 @@ export default function IndicadoresPage() {
           </div>
 
           {/* Inflation chart */}
-          <div className="bg-card border border-border rounded-lg p-5">
+          <div className="bg-card border border-border/60 rounded-lg p-5">
             <div className="text-[10px] font-display uppercase tracking-wider text-muted-foreground mb-4">Inflación mensual (%)</div>
             <div className="h-64">
               <ResponsiveContainer width="100%" height="100%">
@@ -119,7 +122,7 @@ export default function IndicadoresPage() {
           </div>
 
           {/* Reserves chart */}
-          <div className="bg-card border border-border rounded-lg p-5">
+          <div className="bg-card border border-border/60 rounded-lg p-5">
             <div className="text-[10px] font-display uppercase tracking-wider text-muted-foreground mb-4">Reservas BCRA (MM USD)</div>
             <div className="h-64">
               <ResponsiveContainer width="100%" height="100%">
@@ -135,7 +138,7 @@ export default function IndicadoresPage() {
           </div>
 
           {/* Risk chart */}
-          <div className="bg-card border border-border rounded-lg p-5">
+          <div className="bg-card border border-border/60 rounded-lg p-5">
             <div className="text-[10px] font-display uppercase tracking-wider text-muted-foreground mb-4">Riesgo país (bps)</div>
             <div className="h-64">
               <ResponsiveContainer width="100%" height="100%">
@@ -156,7 +159,7 @@ export default function IndicadoresPage() {
         <div className="mt-8 space-y-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {POLITICAL_KPIS.map((kpi, i) => (
-              <div key={i} className="bg-card border border-border rounded-lg p-4">
+              <div key={i} className="bg-card border border-border/60 rounded-lg p-4">
                 <div className="text-[10px] font-display uppercase tracking-wider text-muted-foreground">{kpi.label}</div>
                 <div className="font-display text-2xl mt-1">{kpi.value}</div>
                 <div className="flex items-center gap-2 mt-1">
@@ -169,7 +172,7 @@ export default function IndicadoresPage() {
             ))}
           </div>
 
-          <div className="bg-card border border-border rounded-lg p-5">
+          <div className="bg-card border border-border/60 rounded-lg p-5">
             <div className="text-[10px] font-display uppercase tracking-wider text-muted-foreground mb-3">Contexto político</div>
             <div className="space-y-3 text-sm text-muted-foreground">
               <p>• <strong className="text-foreground">Oficialismo:</strong> LLA mantiene 40%+ de imagen positiva pero núcleo duro más estrecho. La interna Karina-Caputo es el factor de mayor incertidumbre.</p>
@@ -183,7 +186,7 @@ export default function IndicadoresPage() {
 
       {activeTab === 'sectores' && (
         <div className="mt-8 space-y-6">
-          <div className="bg-card border border-border rounded-lg p-5">
+          <div className="bg-card border border-border/60 rounded-lg p-5">
             <div className="text-[10px] font-display uppercase tracking-wider text-muted-foreground mb-4">Variación sectorial (%)</div>
             <div className="h-80">
               <ResponsiveContainer width="100%" height="100%">
@@ -203,7 +206,7 @@ export default function IndicadoresPage() {
             </div>
           </div>
 
-          <div className="bg-card border border-border rounded-lg p-5">
+          <div className="bg-card border border-border/60 rounded-lg p-5">
             <div className="text-[10px] font-display uppercase tracking-wider text-muted-foreground mb-3">Lectura sectorial</div>
             <div className="space-y-2 text-sm text-muted-foreground">
               <p>• <strong className="text-foreground">Mining & Energy:</strong> Vaca Muerta y litio lideran el crecimiento. Inversión extranjera récord.</p>

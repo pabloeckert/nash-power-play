@@ -176,9 +176,12 @@ export default function MatrizPage() {
 
   return (
     <div className="mx-auto max-w-[1600px] px-6 py-8">
-      <div className="font-display text-[10px] uppercase tracking-[0.3em] text-primary">Módulo 02</div>
-      <h1 className="font-display text-3xl mt-1">Matriz de pagos</h1>
-      <p className="text-muted-foreground text-sm mt-1 max-w-2xl">
+      <div className="flex items-center gap-2 mb-2">
+        <span className="font-display text-[9px] text-primary/50 font-bold tracking-wider">02</span>
+        <div className="h-px w-8 bg-primary/20" />
+      </div>
+      <h1 className="font-display text-2xl font-bold tracking-tight">Matriz de pagos</h1>
+      <p className="text-muted-foreground text-xs mt-1 max-w-xl">
         Editor de juegos N×M con cálculo de equilibrios de Nash. Elegí una plantilla o creá tu propia matriz.
       </p>
 
@@ -188,10 +191,10 @@ export default function MatrizPage() {
           <button
             key={key}
             onClick={() => loadTemplate(key)}
-            className={`px-3 h-8 rounded-md border text-xs font-display transition-colors ${
+            className={`px-2.5 h-7 rounded-md border text-[10px] font-display transition-all ${
               activeTemplate === key
-                ? 'border-primary bg-primary/10 text-primary'
-                : 'border-border text-muted-foreground hover:text-foreground'
+                ? 'border-primary/40 bg-primary/10 text-primary'
+                : 'border-border/40 text-muted-foreground hover:text-foreground'
             }`}
           >
             {t.name}
@@ -206,8 +209,8 @@ export default function MatrizPage() {
           <button
             key={s}
             onClick={() => resize(s as MatrixSize)}
-            className={`px-3 h-7 rounded-md border text-xs font-display ${
-              size === s ? 'border-primary text-primary' : 'border-border text-muted-foreground'
+            className={`px-2.5 h-6 rounded-md border text-[10px] font-display ${
+              size === s ? 'border-primary/40 text-primary bg-primary/10' : 'border-border/40 text-muted-foreground'
             }`}
           >
             {s}×{s}
@@ -297,8 +300,8 @@ export default function MatrizPage() {
       {/* Results */}
       <div className="mt-8 grid md:grid-cols-2 gap-6">
         {/* Pure Nash */}
-        <div className="bg-card border border-border rounded-lg p-5">
-          <h2 className="font-display text-sm text-primary mb-3">Equilibrios de Nash (estrategias puras)</h2>
+        <div className="bg-card border border-border/60 rounded-lg p-5">
+          <h2 className="font-display text-xs uppercase tracking-wider text-primary font-semibold mb-3">Equilibrios de Nash (estrategias puras)</h2>
           {nash.pure.length === 0 ? (
             <p className="text-sm text-muted-foreground">No hay equilibrios en estrategias puras.</p>
           ) : (
@@ -319,8 +322,8 @@ export default function MatrizPage() {
         </div>
 
         {/* Mixed Nash */}
-        <div className="bg-card border border-border rounded-lg p-5">
-          <h2 className="font-display text-sm text-primary mb-3">Equilibrio de Nash (estrategias mixtas)</h2>
+        <div className="bg-card border border-border/60 rounded-lg p-5">
+          <h2 className="font-display text-xs uppercase tracking-wider text-primary font-semibold mb-3">Equilibrio de Nash (estrategias mixtas)</h2>
           {nash.mixed ? (
             <div className="space-y-4">
               <div>

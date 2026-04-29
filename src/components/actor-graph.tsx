@@ -17,9 +17,9 @@ import { cn } from '@/lib/utils'
 const KIND_COLOR: Record<ActorKind, string> = {
   party: 'var(--chart-1)',
   leader: 'var(--primary)',
-  union: 'var(--signal-rival)',
+  union: 'var(--chart-3)',
   business: 'var(--chart-5)',
-  media: 'var(--chart-4)',
+  media: 'var(--chart-2)',
   institution: 'var(--signal-neutral)',
 }
 

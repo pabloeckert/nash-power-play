@@ -117,9 +117,12 @@ export default function EscenariosPage() {
 
   return (
     <div className="mx-auto max-w-[1600px] px-6 py-8">
-      <div className="font-display text-[10px] uppercase tracking-[0.3em] text-primary">Módulo 03</div>
-      <h1 className="font-display text-3xl mt-1">Escenarios</h1>
-      <p className="text-muted-foreground text-sm mt-1 max-w-2xl">
+      <div className="flex items-center gap-2 mb-2">
+        <span className="font-display text-[9px] text-primary/50 font-bold tracking-wider">03</span>
+        <div className="h-px w-8 bg-primary/20" />
+      </div>
+      <h1 className="font-display text-2xl font-bold tracking-tight">Escenarios</h1>
+      <p className="text-muted-foreground text-xs mt-1 max-w-xl">
         Simulador what-if. Ajustá los parámetros y observá cómo se desplazan los equilibrios de Nash.
       </p>
 
@@ -127,14 +130,14 @@ export default function EscenariosPage() {
         {/* Main results */}
         <div className="space-y-6">
           {/* Verdict */}
-          <div className="bg-card border border-border rounded-lg p-5">
-            <div className="text-[10px] font-display uppercase tracking-wider text-muted-foreground mb-2">Veredicto Nash</div>
+          <div className="bg-card border border-border/60 rounded-lg p-5">
+            <div className="text-[9px] font-display uppercase tracking-[0.2em] text-muted-foreground font-semibold mb-2">Veredicto Nash</div>
             <p className={`font-display text-lg ${verdict.color}`}>{verdict.text}</p>
           </div>
 
           {/* Scenario bars */}
-          <div className="bg-card border border-border rounded-lg p-5 space-y-4">
-            <div className="text-[10px] font-display uppercase tracking-wider text-muted-foreground">Probabilidades de escenario</div>
+          <div className="bg-card border border-border/60 rounded-lg p-5 space-y-4">
+            <div className="text-[9px] font-display uppercase tracking-[0.2em] text-muted-foreground font-semibold">Probabilidades</div>
             {scenarios.map((s, i) => (
               <div key={i} className="space-y-1">
                 <div className="flex items-center justify-between">
@@ -149,8 +152,8 @@ export default function EscenariosPage() {
           </div>
 
           {/* Reference scenarios */}
-          <div className="bg-card border border-border rounded-lg p-5">
-            <div className="text-[10px] font-display uppercase tracking-wider text-muted-foreground mb-3">Escenarios Nash de referencia</div>
+          <div className="bg-card border border-border/60 rounded-lg p-5">
+            <div className="text-[9px] font-display uppercase tracking-[0.2em] text-muted-foreground font-semibold mb-3">Referencia Nash</div>
             <div className="grid md:grid-cols-2 gap-3">
               {SCENARIOS.map((s, i) => (
                 <div key={i} className="p-3 bg-accent rounded-md">
@@ -167,9 +170,9 @@ export default function EscenariosPage() {
 
         {/* Sidebar: Sliders */}
         <div className="space-y-4">
-          <div className="bg-card border border-border rounded-lg p-4 sticky top-20">
+          <div className="bg-card border border-border/60 rounded-lg p-4 sticky top-20">
             <div className="flex items-center justify-between mb-4">
-              <span className="font-display text-xs uppercase tracking-wider text-muted-foreground">Parámetros</span>
+              <span className="font-display text-[10px] uppercase tracking-[0.2em] text-muted-foreground font-semibold">Parámetros</span>
               <button onClick={resetParams} className="text-[10px] font-display text-primary hover:underline">Reset</button>
             </div>
 
