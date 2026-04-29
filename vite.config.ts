@@ -11,4 +11,22 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+          'vendor-xyflow': ['@xyflow/react'],
+          'vendor-recharts': ['recharts'],
+          'vendor-data': [
+            './src/lib/seed-data.ts',
+            './src/lib/data/ai-thinking.ts',
+            './src/lib/data/analysts.ts',
+            './src/lib/data/congress.ts',
+            './src/lib/data/provinces.ts',
+          ],
+        },
+      },
+    },
+  },
 })
